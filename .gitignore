@@ -45,4 +45,4 @@ app.*.map.json
 
 #Classes
 lib/VLCPlayer/
-lib/WebView
+lib/WebViewPlayground

@@ -2,12 +2,12 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class WebViewExample extends StatefulWidget {
+class WebViewPlayground extends StatefulWidget {
   @override
-  WebViewExampleState createState() => WebViewExampleState();
+  WebViewPlaygroundState createState() => WebViewPlaygroundState();
 }
 
-class WebViewExampleState extends State<WebViewExample> {
+class WebViewPlaygroundState extends State<WebViewPlayground> {
   @override
   void initState() {
     super.initState();
@@ -22,7 +22,7 @@ class WebViewExampleState extends State<WebViewExample> {
         body: Container(
           color: Colors.red,
           child: WebView(
-            initialUrl: 'https://ikonik.ca',
+            initialUrl: 'https://google.com',
             javascriptMode: JavascriptMode.unrestricted,
           ),
         ),
