@@ -35,6 +35,17 @@ class OverlayWidgetPlayground extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateColor.resolveWith((states) {
+                    if (states.contains(MaterialState.pressed)) {
+                      _formKey.currentState.save();
+                      if (userInput.length >= 4)
+                        return Colors.blue;
+                      else
+                        return Colors.red;
+                    }
+                    return Colors.black;
+                  })),
                   onPressed: () {
                     _formKey.currentState.save();
                     OverlayState overlayState = Overlay.of(context);
