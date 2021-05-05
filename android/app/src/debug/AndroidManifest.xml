@@ -1,10 +1,39 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.play.flutter_playground">
     <!-- Flutter needs it to communicate with the running application
          to allow setting breakpoints, to provide hot reload, etc.
     -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+<!--    <provider-->
+<!--        android:name="vn.hunghd.flutterdownloader.DownloadedFileProvider"-->
+<!--        android:authorities="${applicationId}.flutter_downloader.provider"-->
+<!--        android:exported="false"-->
+<!--        android:grantUriPermissions="true">-->
+<!--        <meta-data-->
+<!--            android:name="android.support.FILE_PROVIDER_PATHS"-->
+<!--            android:resource="@xml/provider_paths"/>-->
+<!--    </provider>-->
+
+<!--    <provider-->
+<!--        android:name="androidx.work.impl.WorkManagerInitializer"-->
+<!--        android:authorities="${applicationId}.workmanager-init"-->
+<!--        tools:node="remove" />-->
+
+<!--    <provider-->
+<!--        android:name="vn.hunghd.flutterdownloader.FlutterDownloaderInitializer"-->
+<!--        android:authorities="${applicationId}.flutter-downloader-init"-->
+<!--        android:exported="false">-->
+<!--        &lt;!&ndash; changes this number to configure the maximum number of concurrent tasks &ndash;&gt;-->
+<!--        <meta-data-->
+<!--            android:name="vn.hunghd.flutterdownloader.MAX_CONCURRENT_TASKS"-->
+<!--            android:value="5" />-->
+<!--    </provider>-->
 
 </manifest>

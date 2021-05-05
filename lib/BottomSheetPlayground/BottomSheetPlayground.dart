@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_playground/main.dart';
 
 class BottomSheetPlayground extends StatelessWidget {
   final TextEditingController _txtCtrl = TextEditingController();
@@ -79,7 +78,7 @@ revealModalBottomSheet({
         return Builder(
           builder: (context) {
             return Container(
-              height: deviceHeight * i / 10,
+              height: MediaQuery.of(context).size.height * i / 10,
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 12.0),
                 child: Column(
