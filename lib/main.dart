@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_downloader/flutter_downloader.dart';
 
 import 'DownloadFilePlayground/DownloadFilePlayground.dart';
 
-void main() => runApp(MaterialApp(home: MyApp()));
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await FlutterDownloader.initialize(
+      debug: true // optional: set false to disable printing logs to console
+      );
+  runApp(MaterialApp(home: MyApp()));
+}
 
 double deviceHeight;
 double deviceWidth;
