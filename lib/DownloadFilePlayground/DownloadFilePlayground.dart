@@ -1,9 +1,6 @@
-import 'dart:convert';
-import 'dart:io';
+import 'package:ext_storage/ext_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
-import 'package:http/http.dart' as http;
-import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class DownloadFilePlayground extends StatefulWidget {
@@ -22,12 +19,14 @@ class _DownloadFilePlaygroundState extends State<DownloadFilePlayground> {
   }
 
   downloadPdf() async {
-    Directory storagePath = await getExternalStorageDirectory();
+    String storagePath = await ExtStorage.getExternalStoragePublicDirectory(
+        ExtStorage.DIRECTORY_DOWNLOADS);
+    print('STORAGE PATH: $storagePath');
 
     await FlutterDownloader.enqueue(
       url:
           'https://8eecca5c-3cde-4e9e-81e7-df61f52aabe5.filesusr.com/ugd/f3fda3_f141767d5e8b46869f1fa9393c7c5c83.pdf',
-      savedDir: storagePath.path,
+      savedDir: storagePath,
       fileName: 'Flutter Cheat Sheet.pdf',
     );
   }
@@ -48,7 +47,8 @@ class _DownloadFilePlaygroundState extends State<DownloadFilePlayground> {
                 child: Text('Download Flutter Cheat Sheet pdf '),
               ),
               Text(
-                'You will see the PDF file in your notifications bar.',
+                'You will see the PDF file in your notifications bar.\n The file will be stored in your downloads folder.',
+                textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 20),
               ),
             ],
