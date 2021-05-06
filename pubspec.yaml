@@ -30,6 +30,7 @@ dependencies:
 
 
   http:
+  ext_storage:
   path_provider: ^1.6.28
   cupertino_icons: ^0.1.3
   webview_flutter: ^1.0.7
