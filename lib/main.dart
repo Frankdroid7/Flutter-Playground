@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:flutter_playground/BottomSheetPlayground/BottomSheetPlayground.dart';
+import 'CustomPaintPlayground/CustomPaintPlayground.dart';
 import 'DownloadFilePlayground/DownloadFilePlayground.dart';
 
 void main() async {
@@ -14,6 +15,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return DownloadFilePlayground();
+    return CustomPaintPlayground();
   }
 }
