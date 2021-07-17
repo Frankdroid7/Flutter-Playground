@@ -30,6 +30,7 @@ dependencies:
 
   http:
   ext_storage:
+  connectivity: ^2.0.2
   path_provider: ^1.6.28
   graphql_flutter: ^3.1.0
   cupertino_icons: ^0.1.3
