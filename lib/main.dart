@@ -1,16 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_downloader/flutter_downloader.dart';
-import 'package:flutter_playground/BottomSheetPlayground/BottomSheetPlayground.dart';
-import 'package:flutter_playground/GraphQLPlayground/GraphQLPlayground.dart';
-import 'package:flutter_playground/NetworkPlayground/NetworkPlayGround.dart';
-import 'CustomPaintPlayground/CustomPaintPlayground.dart';
-import 'DownloadFilePlayground/DownloadFilePlayground.dart';
+import 'NetworkPlayground/NetworkPlayGround.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await FlutterDownloader.initialize(
-      debug: true // optional: set false to disable printing logs to console
-      );
   runApp(
     MaterialApp(
       home: MyApp(),
