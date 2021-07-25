@@ -1,11 +1,10 @@
 import 'dart:io';
-import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:blue_thermal_printer/blue_thermal_printer.dart';
 import 'package:flutter/services.dart';
-// import 'package:path_provider/path_provider.dart';
-import 'package:blue_thermal_printer/blue_thermal_printer.dart';
+import 'package:path_provider/path_provider.dart';
 
 class BluetoothPrinterPlayground extends StatefulWidget {
   @override
@@ -30,17 +29,17 @@ class _BluetoothPrinterPlaygroundState
     // initSavetoPath();
   }
 
-  // initSavetoPath() async {
-  //   //read and write
-  //   //image max 300px X 300px
-  //   final filename = 'yourlogo.png';
-  //   var bytes = await rootBundle.load("assets/images/yourlogo.png");
-  //   String dir = (await getApplicationDocumentsDirectory()).path;
-  //   writeToFile(bytes, '$dir/$filename');
-  //   setState(() {
-  //     pathImage = '$dir/$filename';
-  //   });
-  // }
+  initSaveToPath() async {
+    //read and write
+    //image max 300px X 300px
+    final filename = 'yourlogo.png';
+    var bytes = await rootBundle.load("assets/images/yourlogo.png");
+    String dir = (await getApplicationDocumentsDirectory()).path;
+    writeToFile(bytes, '$dir/$filename');
+    setState(() {
+      pathImage = '$dir/$filename';
+    });
+  }
 
   Future<void> initPlatformState() async {
     List<BluetoothDevice> devices = [];
@@ -167,11 +166,11 @@ class _BluetoothPrinterPlaygroundState
   }
 
 //write to app path
-//   Future<void> writeToFile(ByteData data, String path) {
-//     final buffer = data.buffer;
-//     return new File(path).writeAsBytes(
-//         buffer.asUint8List(data.offsetInBytes, data.lengthInBytes));
-//   }
+  Future<void> writeToFile(ByteData data, String path) {
+    final buffer = data.buffer;
+    return new File(path).writeAsBytes(
+        buffer.asUint8List(data.offsetInBytes, data.lengthInBytes));
+  }
 
   void _tesPrint() async {
     //SIZE
