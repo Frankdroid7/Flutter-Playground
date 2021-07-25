@@ -3,6 +3,7 @@ import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:flutter_playground/BottomSheetPlayground/BottomSheetPlayground.dart';
 import 'package:flutter_playground/GraphQLPlayground/GraphQLPlayground.dart';
 import 'package:flutter_playground/NetworkPlayground/NetworkPlayGround.dart';
+import 'BluetoothPrinterPlayground/BluetoothPrinterPlayground.dart';
 import 'CustomPaintPlayground/CustomPaintPlayground.dart';
 import 'DownloadFilePlayground/DownloadFilePlayground.dart';
 
@@ -21,6 +22,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return NetworkPlayground();
+    return BluetoothPrinterPlayground();
   }
 }
