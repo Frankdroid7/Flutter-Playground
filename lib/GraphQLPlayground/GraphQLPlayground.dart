@@ -2,7 +2,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/GraphQLPlayground/Config.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import 'data/todo.dart';
 
@@ -13,16 +12,6 @@ class GraphQLPlayground extends StatefulWidget {
 
 class _GraphQLPlaygroundState extends State<GraphQLPlayground> {
   String userTodo;
-
-  _launchURL() async {
-    const url =
-        'https://hasura.io/learn/graphql/graphiql?tutorial=react-native';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
