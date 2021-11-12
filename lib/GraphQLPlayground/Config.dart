@@ -3,13 +3,13 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 
 class Config {
   static final HttpLink httpLink = HttpLink(
-    uri: 'https://hasura.io/learn/graphql',
+    'https://hasura.io/learn/graphql',
   );
   static String _token;
 
   static final AuthLink authLink = AuthLink(getToken: () => _token);
   static final WebSocketLink webSocketLink = WebSocketLink(
-    url: 'wss://hasura.io/learn/graphql',
+    'wss://hasura.io/learn/graphql',
     config: SocketClientConfig(
       autoReconnect: true,
       inactivityTimeout: Duration(seconds: 30),
@@ -27,7 +27,7 @@ class Config {
     _token = token;
     ValueNotifier<GraphQLClient> client = ValueNotifier(
       GraphQLClient(
-        cache: OptimisticCache(dataIdFromObject: typenameDataIdFromObject),
+        cache: GraphQLCache(),
         link: link,
       ),
     );
