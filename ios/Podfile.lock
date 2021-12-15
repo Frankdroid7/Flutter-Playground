@@ -1,59 +1,28 @@
 PODS:
-  - ext_storage (0.0.1):
-    - Flutter
   - Flutter (1.0.0)
-  - flutter_downloader (0.0.1):
-    - Flutter
-  - flutter_vlc_player (3.0.3):
-    - Flutter
-    - MobileVLCKit (~> 3.3.14)
-  - MobileVLCKit (3.3.16.3)
   - path_provider (0.0.1):
     - Flutter
-  - "permission_handler (5.1.0+2)":
-    - Flutter
-  - webview_flutter (0.0.1):
+  - share (0.0.1):
     - Flutter
 
 DEPENDENCIES:
-  - ext_storage (from `.symlinks/plugins/ext_storage/ios`)
   - Flutter (from `Flutter`)
-  - flutter_downloader (from `.symlinks/plugins/flutter_downloader/ios`)
-  - flutter_vlc_player (from `.symlinks/plugins/flutter_vlc_player/ios`)
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
-  - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
-  - webview_flutter (from `.symlinks/plugins/webview_flutter/ios`)
-
-SPEC REPOS:
-  trunk:
-    - MobileVLCKit
+  - share (from `.symlinks/plugins/share/ios`)
 
 EXTERNAL SOURCES:
-  ext_storage:
-    :path: ".symlinks/plugins/ext_storage/ios"
   Flutter:
     :path: Flutter
-  flutter_downloader:
-    :path: ".symlinks/plugins/flutter_downloader/ios"
-  flutter_vlc_player:
-    :path: ".symlinks/plugins/flutter_vlc_player/ios"
   path_provider:
     :path: ".symlinks/plugins/path_provider/ios"
-  permission_handler:
-    :path: ".symlinks/plugins/permission_handler/ios"
-  webview_flutter:
-    :path: ".symlinks/plugins/webview_flutter/ios"
+  share:
+    :path: ".symlinks/plugins/share/ios"
 
 SPEC CHECKSUMS:
-  ext_storage: 4eaf3a84d5594106e2ebcc2502248cfde53c8fa1
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  flutter_downloader: 058b9c41564a90500f67f3e432e3524613a7fd83
-  flutter_vlc_player: 6feef962742884ff578602a6ce5dc0229e1cedff
-  MobileVLCKit: 2b408a9c5cc327353afab418fafbc942780b248a
   path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
-  permission_handler: ccb20a9fad0ee9b1314a52b70b76b473c5f8dab0
-  webview_flutter: d2b4d6c66968ad042ad94cbb791f5b72b4678a96
+  share: 0b2c3e82132f5888bccca3351c504d0003b3b410
 
 PODFILE CHECKSUM: a75497545d4391e2d394c3668e20cfb1c2bbd4aa
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
